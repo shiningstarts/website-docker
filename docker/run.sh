@@ -34,7 +34,7 @@ case $action in
       echo "Usage: ./$script login $containerName"
       exit 1
     fi
-    docker exec -it $containerName /bin/bash 
+    docker exec -it $containerName /bin/sh
   ;;
   *)
     echo "usage: $0 [start|stop|restart|rebuild|build]"
