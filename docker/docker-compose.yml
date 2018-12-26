@@ -10,7 +10,7 @@ services:
     volumes:
           - "./nginx/conf:/usr/local/openresty/nginx/conf"
           - "../log:/var/log"
-          - "/data/www:/usr/local/www"
+          - "../www:/usr/local/www"
           - "phpsocket:/var/run/php"
   php-fpm:
       container_name: base_php71
@@ -19,7 +19,7 @@ services:
       ports:
           - "9000:9000"
       volumes:
-          - "/data/www:/usr/local/www"
+          - "../www:/usr/local/www"
           - "./php/etc/php/php-fpm.d/zz-docker.conf:/usr/local/etc/php-fpm.d/zz-docker.conf"
           - "./php/etc/php/conf.d/zz-php.ini:/usr/local/etc/php/conf.d/zz-php.ini"
           - "phpsocket:/var/run/php"
