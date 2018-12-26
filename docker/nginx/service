@@ -7,7 +7,6 @@ action=${1:-build}
 buildPath=`dirname ${script}`
 dockerGroup=base
 imageName=${dockerGroup}/nginx-stable
-cd `nginx`
 cd `pwd ${script}`
 case $action in
   'build')
