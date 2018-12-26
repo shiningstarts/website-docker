@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+/log/nginx/*
+!/log/nginx/sample.log
+/log/php/*
+!log/php/sample.log

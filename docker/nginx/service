@@ -1,0 +1,24 @@
+#!/bin/bash
+#set -e
+#set -x
+
+script=$0
+action=${1:-build}
+buildPath=`dirname ${script}`
+dockerGroup=base
+imageName=${dockerGroup}/nginx-stable
+cd `nginx`
+cd `pwd ${script}`
+case $action in
+  'build')
+    #echo "docker build ${buildPath} -t ${imageName}"
+    docker build ${buildPath} -t ${imageName}
+    ;;
+  'rebuild')
+    docker rmi ${imageName}
+    docker build ${buildPath} -t ${imageName}
+    ;;
+  *)
+    echo "Usage: ${script} [build|rebuild]"
+    ;;
+esac
