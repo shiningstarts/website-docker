@@ -1,6 +1,6 @@
 version: "3"
 services:
-  openresty:
+  nginx:
     container_name: base_nginx
     image: base/nginx-stable
     ports:
