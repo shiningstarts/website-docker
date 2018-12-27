@@ -1,22 +1,22 @@
-# A docker for website
-## Description
-A one-click deployment for web server(PHP + NGINX)  
-PHP version is 7.1  
-NGINX version is 1.14.2
-Other Languages:
-[Chinese](./README.CN.md)
-## Deploy
+# web 服务器 docker 包
+## 描述
+方便一键部署网页服务器（PHP + NGINX）
+PHP 版本 7.1  
+NGINX 版本号 1.14.2  
+其他语言:
+[英文](./README.md)
+## 部署
 ```shell
 git clone git@github.com:shiningstarts/website-docker.git
 cd website-docker
-# build
+# 构建docker
 docker/run build
-# start service
+# 启动服务
 docker/run start
-# add hosts
+# 添加 hosts
 echo 127.0.0.1 wwww.test.com >> /etc/hosts
-# lauch www.test.com
+#  浏览器访问 www.test.com
 ```
-## Reference
+## 参考
 - [docker-nginx](https://github.com/nginxinc/docker-nginx/)
 - [docker-php](https://github.com/docker-library/php)
